@@ -7,7 +7,8 @@ layout: default
 {% for post in site.posts %}
 <article class="grid trans-all float-up">
   <a href="#{{ post.url }}" title="{{post.title}}" class="db">
-    <img src="{{ post.image }}" class="db img100 float-up" />
+      
+    <img src="{{ post.image }}" class="db img100 float-up" style="-webkit-animation-delay: {{ forloop.index | times:100 }}ms" />
     <!-- <h2 class="pos-abs fill">{{ post.title }}</h2> -->
   </a>
 </article>
