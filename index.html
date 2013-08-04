@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% if site.posts %}
+<div class="overhide">
+{% for post in site.posts %}
+<article class="grid trans-all float-up">
+  <a href="#{{ post.url }}" title="{{post.title}}" class="db">
+    <img src="{{ post.image }}" class="db img100 float-up" />
+    <!-- <h2 class="pos-abs fill">{{ post.title }}</h2> -->
+  </a>
+</article>
+{% endfor %}
+</div>
+
+{% for post in site.posts %}
+<a href="#!" id="{{ post.url }}" class="modal z1 fill bg-darken">
+  <img src="{{ post.image }}" class="fade-in img-fill pos-abs fill" />
+</a>
+{% endfor %}
+
+
+{% endif %}
