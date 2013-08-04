@@ -2,8 +2,7 @@ name: "Packing"
 description: "This is how I pack when I travel."
 author: "Jxnblk"
 
-# url: "http://jxnblk.github.com/jekyll-gallery"
-url: "http://localhost:4000"
+url: "http://jxnblk.github.com/packing"
 
 exclude: [README.md, Rakefile]
 paginate: 64
