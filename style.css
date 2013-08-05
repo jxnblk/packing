@@ -12,34 +12,16 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
 }
 
-h1 {
-  font-size: 96px;
-  margin: 0;
-}
-
-h2 { 
-  font-size: 32px;
-  font-weight: normal;
-  margin: 0;
-}
-
-h3 {
-  font-size: 24px;
-  margin: 0;
-}
-
-p {
-  font-size: 20px;
-  margin-top: 0;
-}
+h1, .h1 { font-size: 48px; }
+h2, .h2 { font-size: 32px; }
+h3, .h3 { font-size: 24px; }
+p, .p   { font-size: 20px; }
+small, .small { font-size: 16px;} 
 
 a {
   color: #333;
-  text-decoration: none;
-}
-a:hover {
-  color: #069;
-}
+  text-decoration: none; }
+  a:hover { color: #069; }
 
 .wrap {
   width: 90%;
@@ -50,8 +32,8 @@ a:hover {
   padding-left: 5%;
 }
 
-.mb { margin-bottom: 64px; }
-.pad { padding: 32px 64px;}
+.mb { margin-bottom: 32px; }
+.pad { padding: 32px; }
 
 .pos-rel { position: relative; }
 .pos-abs { position: absolute; }
@@ -60,10 +42,17 @@ a:hover {
   right:0;
   bottom:0;
   left:0;
-  margin: auto;
-}
+  margin: auto; }
+
+.top    { top: 0; }
+.right  { right: 0; }
+.bottom { bottom: 0; }
+.left   { left: 0; }
+
 .z1 { z-index: 1; }
 .z2 { z-index: 2; }
+.z3 { z-index: 3; }
+.z4 { z-index: 4; }
 
 .db { display: block;}
 
@@ -71,11 +60,12 @@ a:hover {
 .img-fill { 
   max-width: 100%;
   max-height: 100%;
-  /*max-height: 100%;
-  max-width: 100%;*/
 }
-/*.maxhi100 { max-height: 100%; }*/
+
 .overhide { overflow: hidden; }
+
+
+/* Minimal Grid */
 
 .grid {
   float: left;
@@ -83,9 +73,7 @@ a:hover {
 }
   @media screen and (min-width: 512px) and (max-width: 895px) {
     .grid { width: 50%; }
-    .grid:nth-child(2n+1) {
-      clear: left;
-    }
+    .grid:nth-child(2n+1) { clear: left; }
   }
   @media screen and (min-width: 896px) and (max-width: 1279px) {
     .grid { width: 33.333333%; }
@@ -95,6 +83,21 @@ a:hover {
     .grid { width: 25%; }
     .grid:nth-child(4n+1) { clear: left; }
   }
+
+/**
+ *  Usage: Make sure that elements with the .grid class are
+ *  the only direct children of their container element.
+ *
+ *  Example:
+ * 
+ *  <div>
+ *    <div class="grid"></div>
+ *    <div class="grid"></div>
+ *    <div class="grid"></div>
+ *    <div class="grid"></div>
+ *  </div>
+ */
+
 
 /* Float up animation */
 @-webkit-keyframes float-up {
